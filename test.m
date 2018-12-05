@@ -1,0 +1,12 @@
+file = 'matlab3_file_D30_2018';
+filename = strcat('wavfiles/',file,'.wav');
+period = 0.125;
+multirateAnalyzer;
+dftAnalyzer;
+figure(1); clf; hold on;
+plot(t,dftoutput);
+plot(t,multirateoutput);
+legend('DFT Method','Multirate Method');
+xlabel('Time (sec)');
+ylabel('Sound Level (dBA)');
+title(strcat(file,' Method Comparison; T = ',num2str(period)),'Interpreter','none');
